@@ -1,0 +1,11 @@
+{
+  "name": "workaround",
+  "version": "1.0.0",
+  "description": "WorkAround Project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

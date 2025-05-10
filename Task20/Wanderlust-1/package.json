@@ -1,0 +1,22 @@
+{
+  "name": "wanderlust",
+  "version": "1.0.0",
+  "description": "A travel website that fetches venue and weather information using Foursquare and OpenWeather APIs.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "live-server": "^1.2.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

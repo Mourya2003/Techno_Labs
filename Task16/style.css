@@ -1,0 +1,173 @@
+/* Universal Styles */
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.secondary-background {
+    background-color: #f9f9f9;
+}
+
+.tagline {
+    font-family: 'Quicksand', sans-serif;
+    color: #555;
+    line-height: 125px;
+}
+
+/* Header */
+h1 {
+    margin: 0;
+    background-color: #4caf50;
+    line-height: 100px;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    margin: 10px;
+    color: #333;
+}
+
+/* App Container */
+.container {
+    border: 2px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* To Do Section */
+.week {
+    display: inline-flex;
+    flex-grow: 3;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.row {
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.square {
+    width: 125px;
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.square:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.day.square {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid white;
+}
+
+.task.square {
+    background-color: #ffeb3b;
+    color: #333;
+    border: 1px solid white;
+}
+
+.task p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* Reminders */
+.reminders {
+    background-color: #ffeb3b;
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.reminders h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .square {
+        width: 100px;
+        height: 100px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .reminders h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .square {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .reminders h3 {
+        font-size: 18px;
+    }
+}
