@@ -1,0 +1,443 @@
+/* === GOOGLE FONTS IMPORTS === */
+@font-face {
+    font-family: 'Abril Fatface';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/abrilfatface/v21/zOL64pLDlL1D99S8g8PtiKchq-dmiA.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/worksans/v22/QGYsz_wNahGAdqQ43Rh_fKDp.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://fonts.gstatic.com/s/worksans/v22/QGYsz_wNahGAdqQ43Rh3fKDp.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('https://fonts.gstatic.com/s/worksans/v22/QGYsz_wNahGAdqQ43RhxfKDp.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-eR7lXw.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/merriweather/v30/u-4_0qyriQwlOrhSvowK_l52xwNZWWdO.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Croissant One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/CroissantOne-Regular.ttf') format('truetype');
+  }
+  
+  /* === BASE FONT SIZE === */
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (max-width: 680px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* === HEADER === */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.44rem;
+    padding: 0 8%;
+    background: linear-gradient(90deg, #fff 80%, #ffe5d0 100%);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+    font-family: Verdana, sans-serif;
+    font-size: .95rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 1s cubic-bezier(.77,0,.18,1) 0.2s both;
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .header .logo {
+    flex-grow: 1;
+    color: #ffb78c;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    font-family: 'Abril Fatface', serif;
+    text-shadow: 1px 2px 8px #ffe5d0;
+    transition: color 0.3s;
+  }
+  
+  .header .logo:hover {
+    color: #10b0d8;
+  }
+  
+  .header ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .header li {
+    display: inline;
+  }
+  
+  .header li a {
+    text-decoration: none;
+    color: #4a4a4a;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+    font-family: 'Work Sans', Arial, sans-serif;
+  }
+  
+  .header li a:hover {
+    background: #ffb78c;
+    color: #fff;
+    box-shadow: 0 2px 8px #ffb78c44;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem 2%;
+      text-align: center;
+    }
+    .header ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* === BANNER === */
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: linear-gradient(rgba(16,176,216,0.18), rgba(255,183,140,0.18)), url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-6/project-morocco/banner.jpg") center center no-repeat;
+    background-size: cover;
+    color: #ffb78c;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+  }
+  
+  .banner h2 {
+    padding: .55rem 0;
+    border-top: 4px solid #ffb78c;
+    border-bottom: 4px solid #ffb78c;
+    font-size: 1.44rem;
+    letter-spacing: 2px;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 500;
+    background: rgba(255,255,255,0.12);
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    animation: fadeInUp 1s 0.5s both;
+  }
+  
+  .banner h1 {
+    padding-top: 1.11rem;
+    font-size: 8rem;
+    font-family: 'Abril Fatface', sans-serif;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-shadow: 0 4px 24px #21212144;
+    animation: fadeInUp 1.2s 0.7s both;
+  }
+  
+  .banner-btn {
+    margin-top: 2.5rem;
+    padding: 0.9em 2.2em;
+    background: #10b0d8;
+    color: #fff;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 24px #10b0d822;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+    animation: fadeInUp 1.2s 1s both;
+    display: inline-block;
+  }
+  
+  .banner-btn:hover {
+    background: #ffb78c;
+    color: #212121;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 32px #ffb78c44;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .banner h1 {
+      font-size: 5rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .banner h1 {
+      font-size: 2.7rem;
+    }
+    .banner h2 {
+      font-size: 1rem;
+    }
+  }
+  
+  /* === JOURNAL === */
+  .journal {
+    padding: 0 20% 4rem 20%;
+    background-color: rgb(254, 231, 218);
+    color: #4a4a4a;
+    font-family: 'Work Sans', serif;
+    min-height: 100vh;
+    animation: fadeIn 1.5s 0.5s both;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .journal {
+      padding: 0 5% 4rem 5%;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .journal {
+      padding: 0 2% 2rem 2%;
+    }
+  }
+  
+  .journal p {
+    padding-bottom: 2.77rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .journal p.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .journal .first-letter {
+    float: left;
+    padding-right: 1.4rem;
+    font-family: "Abril Fatface", serif;
+    font-size: 5rem;
+    color: #10b0d8;
+    line-height: 0.87;
+    margin-top: 0.1em;
+    margin-bottom: -0.1em;
+    text-shadow: 0 2px 8px #10b0d822;
+  }
+  
+  .photo {
+    width: 80%;
+    max-width: 600px;
+    padding: 1.11rem;
+    border-radius: 12px;
+    margin: 2.5rem auto 4.44rem auto;
+    background-color: #fff;
+    box-shadow: 0 4px 24px #ffb78c22;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .photo.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .photo .image-container {
+    overflow: hidden;
+    margin-bottom: 1.11rem;
+    border-radius: 10px;
+  }
+  
+  .photo .image-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+    filter: brightness(0.97) contrast(1.08) saturate(1.1);
+  }
+  
+  .photo .image-container img:hover {
+    transform: scale(1.06) rotate(-1deg);
+  }
+  
+  .photo .caption {
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    color: #10b0d8;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+  }
+  
+  .photo.first {
+    position: relative;
+    top: -2.77rem;
+    margin-bottom: 1.67rem;
+  }
+  
+  .quote {
+    display: block;
+    padding: 3.44rem 0 2.44rem 0;
+    margin-bottom: 3.33rem;
+    border-top: 4px solid #10b0d8;
+    border-bottom: 4px solid #ffb78c;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Work Sans', Arial, sans-serif;
+    color: #212121;
+    background: linear-gradient(90deg, #ffe5d0 0%, #fff 100%);
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .quote.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .photo {
+      width: 98%;
+      padding: 0.5rem;
+    }
+    .quote {
+      font-size: 1.2rem;
+      padding: 1.5rem 0 1rem 0;
+    }
+    .journal .first-letter {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* === FOOTER === */
+  footer {
+    display: flex;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: #212121;
+    font-family: 'Croissant One', 'Merriweather', serif;
+    color: #fff;
+    min-height: 220px;
+    box-shadow: 0 -2px 24px #21212144;
+    animation: fadeIn 1.5s 1s both;
+  }
+  
+  footer .image-container {
+    width: 180px;
+    min-width: 120px;
+    margin-right: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 24px #10b0d822;
+    background: #fff;
+  }
+  
+  footer .image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    transition: transform 0.5s;
+  }
+  
+  footer .image-container img:hover {
+    transform: scale(1.08) rotate(2deg);
+  }
+  
+  footer .content {
+    flex-grow: 1;
+    font-style: italic;
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  
+  footer p {
+    padding-bottom: 1.66rem;
+  }
+  
+  footer p:last-child {
+    padding-bottom: 0;
+  }
+  
+  footer .author {
+    color: #ffb78c;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  footer em {
+    color: #cfcfcf;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    footer {
+      flex-direction: column;
+      padding: 2rem 5% 2rem 5%;
+      text-align: center;
+    }
+    footer .image-container {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+  
+  /* === ANIMATIONS === */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+  }

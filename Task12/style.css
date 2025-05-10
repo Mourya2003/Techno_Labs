@@ -1,0 +1,303 @@
+header {
+    background: linear-gradient(90deg, #333333 70%, #ffb347 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transition: background 0.3s;
+    animation: fadeInDown 1s;
+  }
+  
+  @keyframes fadeInDown {
+    from { transform: translateY(-60px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav li {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    width: 90px;
+    letter-spacing: 1px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 0;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+    position: relative;
+  }
+  
+  nav li:hover {
+    background: #ffb347;
+    color: #333333;
+    transform: translateY(-3px) scale(1.07);
+    box-shadow: 0 2px 8px rgba(255,179,71,0.15);
+  }
+  
+  main {
+    text-align: center;
+    position: relative;
+    top: 80px;
+    min-height: 60vh;
+    background: #fafafa;
+    animation: fadeIn 1.2s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .jumbotron {
+    height: 60vh;
+    min-height: 350px;
+    background-image: url("http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  
+  .jumbotron .container {
+    background: rgba(255,255,255,0.85);
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    animation: fadeInUp 1.2s;
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  main h1 {
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: 0px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #fff, 0 4px 24px #ffb34733;
+    animation: popIn 1.5s;
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    80% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  .btn-main {
+    background-color: #ffb347;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    padding: 18px 44px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 2px 8px #ffb34744;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-top: 20px;
+    display: inline-block;
+    animation: fadeIn 2s;
+  }
+  
+  .btn-main:hover {
+    background: #333;
+    color: #ffb347;
+    transform: scale(1.08);
+  }
+  
+  .supporting {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background: #fff;
+  }
+  
+  .supporting .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .supporting .col {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    width: 220px;
+    height: 240px;
+    background: linear-gradient(135deg, #fff 80%, #ffb34722 100%);
+    margin: 0 10px 30px 10px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    padding: 30px 10px 20px 10px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: fadeInUp 1.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .supporting .col:hover {
+    transform: translateY(-10px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px #ffb34744;
+    background: linear-gradient(135deg, #ffb34722 60%, #fff 100%);
+  }
+  
+  .supporting img {
+    height: 40px;
+    margin-bottom: 18px;
+    animation: bounceIn 1.2s;
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  .supporting h2 {
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  .supporting p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin-bottom: 18px;
+    color: #444;
+  }
+  
+  .supporting a {
+    background-color: #fff;
+    color: #ffb347;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    margin-bottom: 10px;
+    border: 2px solid #ffb347;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  
+  .supporting a:hover {
+    background: #ffb347;
+    color: #fff;
+    border: 2px solid #333;
+    transform: scale(1.08);
+  }
+  
+  footer {
+    background: linear-gradient(90deg, #333 70%, #ffb347 100%);
+    color: #fff;
+    padding: 30px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+    animation: fadeInUp 1.2s;
+  }
+  
+  footer p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    margin: 0;
+    color: #fff;
+  }
+  
+  body {
+    padding-bottom: 110px;
+    background: #fafafa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .supporting .container {
+      gap: 20px;
+    }
+    .supporting .col {
+      width: 45vw;
+      min-width: 180px;
+      height: 220px;
+    }
+    main h1 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      padding-bottom: 8px;
+    }
+    nav li {
+      width: auto;
+      font-size: 13px;
+      padding: 8px 6px;
+      margin: 0 2px;
+    }
+    .jumbotron .container {
+      padding: 20px 5px;
+    }
+    .supporting .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .supporting .col {
+      width: 90vw;
+      min-width: 140px;
+      height: auto;
+      padding: 20px 5px 15px 5px;
+    }
+    main h1 {
+      font-size: 28px;
+      padding: 0 10px;
+    }
+    .btn-main {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+    body {
+      padding-bottom: 130px;
+    }
+  }
